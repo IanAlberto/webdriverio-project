@@ -52,11 +52,13 @@ exports.config = {
     capabilities: [{
         maxInstances: 1,
         browserName: 'chrome',
+        acceptInsecureCerts: true,
         'goog:chromeOptions': {
             args: [
                 '--headless',
                 '--no-sandbox',
-                '--disable-gpu'
+                '--disable-gpu',
+                '--disable-dev-shm-usage'
             ],
         }
     }],
